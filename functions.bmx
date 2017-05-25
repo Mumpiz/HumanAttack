@@ -114,7 +114,7 @@ Function CreateEnemys(count1:Int, count2:Int)
 	Next
 	For Local i:Int = 0 To count2 -1
 		tEnemy.Create:tEnemy(Rand(-WorldSize+50, WorldSize-50),Rand(-WorldSize+50,WorldSize-50),1)
-	next
+	Next
 End Function
 
 Function CreatePlayer:tPlayer(x:Float,y:Float,speed:Int, life:Int)
@@ -193,7 +193,7 @@ Function checkDistance:Float(x1:Float, y1:Float, x2:Float, y2:Float)
 EndFunction
 
 
-Function LoadMedia()
+Function Loadassets()
 	Graphics 1024,768,0,32
 	SetAudioDriver("OpenAL")
 	AutoImageFlags MASKEDIMAGE|FILTEREDIMAGE|MIPMAPPEDIMAGE
@@ -201,117 +201,117 @@ Function LoadMedia()
 	
 	'Images
 	
-	Img_EnemyCrawlerWalk[5] =  LoadAnimImage("incbin::media/img/anim/crawlerWalk45.png", 100, 100, 0, 20)
-	Img_EnemyCrawlerWalk[6] =  LoadAnimImage("incbin::media/img/anim/crawlerWalk90.png", 100, 100, 0, 20)
-	Img_EnemyCrawlerWalk[7] =  LoadAnimImage("incbin::media/img/anim/crawlerWalk135.png", 100, 100, 0, 20)
-	Img_EnemyCrawlerWalk[0] =  LoadAnimImage("incbin::media/img/anim/crawlerWalk180.png", 100, 100, 0, 20)
-	Img_EnemyCrawlerWalk[1] =  LoadAnimImage("incbin::media/img/anim/crawlerWalk225.png", 100, 100, 0, 20)
-	Img_EnemyCrawlerWalk[2] =  LoadAnimImage("incbin::media/img/anim/crawlerWalk270.png", 100, 100, 0, 20)
-	Img_EnemyCrawlerWalk[3] =  LoadAnimImage("incbin::media/img/anim/crawlerWalk315.png", 100, 100, 0, 20)
-	Img_EnemyCrawlerWalk[4] =  LoadAnimImage("incbin::media/img/anim/crawlerWalk0.png", 100, 100, 0, 20)
+	Img_EnemyCrawlerWalk[5] =  LoadAnimImage("incbin::assets/img/anim/crawlerWalk45.png", 100, 100, 0, 20)
+	Img_EnemyCrawlerWalk[6] =  LoadAnimImage("incbin::assets/img/anim/crawlerWalk90.png", 100, 100, 0, 20)
+	Img_EnemyCrawlerWalk[7] =  LoadAnimImage("incbin::assets/img/anim/crawlerWalk135.png", 100, 100, 0, 20)
+	Img_EnemyCrawlerWalk[0] =  LoadAnimImage("incbin::assets/img/anim/crawlerWalk180.png", 100, 100, 0, 20)
+	Img_EnemyCrawlerWalk[1] =  LoadAnimImage("incbin::assets/img/anim/crawlerWalk225.png", 100, 100, 0, 20)
+	Img_EnemyCrawlerWalk[2] =  LoadAnimImage("incbin::assets/img/anim/crawlerWalk270.png", 100, 100, 0, 20)
+	Img_EnemyCrawlerWalk[3] =  LoadAnimImage("incbin::assets/img/anim/crawlerWalk315.png", 100, 100, 0, 20)
+	Img_EnemyCrawlerWalk[4] =  LoadAnimImage("incbin::assets/img/anim/crawlerWalk0.png", 100, 100, 0, 20)
 	
-	Img_EnemyCrawlerAttack[5] =  LoadAnimImage("incbin::media/img/anim/crawlerAttack45.png", 100, 100, 0, 20)
-	Img_EnemyCrawlerAttack[6] =  LoadAnimImage("incbin::media/img/anim/crawlerAttack90.png", 100, 100, 0, 20)
-	Img_EnemyCrawlerAttack[7] =  LoadAnimImage("incbin::media/img/anim/crawlerAttack135.png", 100, 100, 0, 20)
-	Img_EnemyCrawlerAttack[0] =  LoadAnimImage("incbin::media/img/anim/crawlerAttack180.png", 100, 100, 0, 20)
-	Img_EnemyCrawlerAttack[1] =  LoadAnimImage("incbin::media/img/anim/crawlerAttack225.png", 100, 100, 0, 20)
-	Img_EnemyCrawlerAttack[2] =  LoadAnimImage("incbin::media/img/anim/crawlerAttack270.png", 100, 100, 0, 20)
-	Img_EnemyCrawlerAttack[3] =  LoadAnimImage("incbin::media/img/anim/crawlerAttack315.png", 100, 100, 0, 20)
-	Img_EnemyCrawlerAttack[4] =  LoadAnimImage("incbin::media/img/anim/crawlerAttack0.png", 100, 100, 0, 20)
+	Img_EnemyCrawlerAttack[5] =  LoadAnimImage("incbin::assets/img/anim/crawlerAttack45.png", 100, 100, 0, 20)
+	Img_EnemyCrawlerAttack[6] =  LoadAnimImage("incbin::assets/img/anim/crawlerAttack90.png", 100, 100, 0, 20)
+	Img_EnemyCrawlerAttack[7] =  LoadAnimImage("incbin::assets/img/anim/crawlerAttack135.png", 100, 100, 0, 20)
+	Img_EnemyCrawlerAttack[0] =  LoadAnimImage("incbin::assets/img/anim/crawlerAttack180.png", 100, 100, 0, 20)
+	Img_EnemyCrawlerAttack[1] =  LoadAnimImage("incbin::assets/img/anim/crawlerAttack225.png", 100, 100, 0, 20)
+	Img_EnemyCrawlerAttack[2] =  LoadAnimImage("incbin::assets/img/anim/crawlerAttack270.png", 100, 100, 0, 20)
+	Img_EnemyCrawlerAttack[3] =  LoadAnimImage("incbin::assets/img/anim/crawlerAttack315.png", 100, 100, 0, 20)
+	Img_EnemyCrawlerAttack[4] =  LoadAnimImage("incbin::assets/img/anim/crawlerAttack0.png", 100, 100, 0, 20)
 	
-	Img_EnemyCrawlerDie[5] =  LoadAnimImage("incbin::media/img/anim/crawlerDie45.png", 100, 100, 0, 10)
-	Img_EnemyCrawlerDie[6] =  LoadAnimImage("incbin::media/img/anim/crawlerDie90.png", 100, 100, 0, 10)
-	Img_EnemyCrawlerDie[7] =  LoadAnimImage("incbin::media/img/anim/crawlerDie135.png", 100, 100, 0, 10)
-	Img_EnemyCrawlerDie[0] =  LoadAnimImage("incbin::media/img/anim/crawlerDie180.png", 100, 100, 0, 10)
-	Img_EnemyCrawlerDie[1] =  LoadAnimImage("incbin::media/img/anim/crawlerDie225.png", 100, 100, 0, 10)
-	Img_EnemyCrawlerDie[2] =  LoadAnimImage("incbin::media/img/anim/crawlerDie270.png", 100, 100, 0, 10)
-	Img_EnemyCrawlerDie[3] =  LoadAnimImage("incbin::media/img/anim/crawlerDie315.png", 100, 100, 0, 10)
-	Img_EnemyCrawlerDie[4] =  LoadAnimImage("incbin::media/img/anim/crawlerDie0.png", 100, 100, 0, 10)
+	Img_EnemyCrawlerDie[5] =  LoadAnimImage("incbin::assets/img/anim/crawlerDie45.png", 100, 100, 0, 10)
+	Img_EnemyCrawlerDie[6] =  LoadAnimImage("incbin::assets/img/anim/crawlerDie90.png", 100, 100, 0, 10)
+	Img_EnemyCrawlerDie[7] =  LoadAnimImage("incbin::assets/img/anim/crawlerDie135.png", 100, 100, 0, 10)
+	Img_EnemyCrawlerDie[0] =  LoadAnimImage("incbin::assets/img/anim/crawlerDie180.png", 100, 100, 0, 10)
+	Img_EnemyCrawlerDie[1] =  LoadAnimImage("incbin::assets/img/anim/crawlerDie225.png", 100, 100, 0, 10)
+	Img_EnemyCrawlerDie[2] =  LoadAnimImage("incbin::assets/img/anim/crawlerDie270.png", 100, 100, 0, 10)
+	Img_EnemyCrawlerDie[3] =  LoadAnimImage("incbin::assets/img/anim/crawlerDie315.png", 100, 100, 0, 10)
+	Img_EnemyCrawlerDie[4] =  LoadAnimImage("incbin::assets/img/anim/crawlerDie0.png", 100, 100, 0, 10)
 	
-	Img_EnemyCrawlerCorpse =  LoadImage("incbin::media/img/anim/crawlerCorpse.png")
-	
-	
-	Img_EnemyCrawlerEliteWalk[4] =  LoadAnimImage("incbin::media/img/anim/crawlerEliteWalk45.png", 200, 200, 0, 20)
-	Img_EnemyCrawlerEliteWalk[5] =  LoadAnimImage("incbin::media/img/anim/crawlerEliteWalk90.png", 200, 200, 0, 20)
-	Img_EnemyCrawlerEliteWalk[6] =  LoadAnimImage("incbin::media/img/anim/crawlerEliteWalk135.png", 200, 200, 0, 20)
-	Img_EnemyCrawlerEliteWalk[7] =  LoadAnimImage("incbin::media/img/anim/crawlerEliteWalk180.png", 200, 200, 0, 20)
-	Img_EnemyCrawlerEliteWalk[0] =  LoadAnimImage("incbin::media/img/anim/crawlerEliteWalk225.png", 200, 200, 0, 20)
-	Img_EnemyCrawlerEliteWalk[1] =  LoadAnimImage("incbin::media/img/anim/crawlerEliteWalk270.png", 200, 200, 0, 20)
-	Img_EnemyCrawlerEliteWalk[2] =  LoadAnimImage("incbin::media/img/anim/crawlerEliteWalk315.png", 200, 200, 0, 20)
-	Img_EnemyCrawlerEliteWalk[3] =  LoadAnimImage("incbin::media/img/anim/crawlerEliteWalk0.png", 200, 200, 0, 20)
-	
-	Img_EnemyCrawlerEliteAttack[4] =  LoadAnimImage("incbin::media/img/anim/crawlerEliteAttack45.png", 200, 200, 0, 20)
-	Img_EnemyCrawlerEliteAttack[5] =  LoadAnimImage("incbin::media/img/anim/crawlerEliteAttack90.png", 200, 200, 0, 20)
-	Img_EnemyCrawlerEliteAttack[6] =  LoadAnimImage("incbin::media/img/anim/crawlerEliteAttack135.png", 200, 200, 0, 20)
-	Img_EnemyCrawlerEliteAttack[7] =  LoadAnimImage("incbin::media/img/anim/crawlerEliteAttack180.png", 200, 200, 0, 20)
-	Img_EnemyCrawlerEliteAttack[0] =  LoadAnimImage("incbin::media/img/anim/crawlerEliteAttack225.png", 200, 200, 0, 20)
-	Img_EnemyCrawlerEliteAttack[1] =  LoadAnimImage("incbin::media/img/anim/crawlerEliteAttack270.png", 200, 200, 0, 20)
-	Img_EnemyCrawlerEliteAttack[2] =  LoadAnimImage("incbin::media/img/anim/crawlerEliteAttack315.png", 200, 200, 0, 20)
-	Img_EnemyCrawlerEliteAttack[3] =  LoadAnimImage("incbin::media/img/anim/crawlerEliteAttack0.png", 200, 200, 0, 20)
-	
-	Img_EnemyCrawlerEliteDie[5] =  LoadAnimImage("incbin::media/img/anim/crawlerEliteDie45.png", 200, 200, 0, 10)
-	Img_EnemyCrawlerEliteDie[6] =  LoadAnimImage("incbin::media/img/anim/crawlerEliteDie90.png", 200, 200, 0, 10)
-	Img_EnemyCrawlerEliteDie[7] =  LoadAnimImage("incbin::media/img/anim/crawlerEliteDie135.png", 200, 200, 0, 10)
-	Img_EnemyCrawlerEliteDie[0] =  LoadAnimImage("incbin::media/img/anim/crawlerEliteDie180.png", 200, 200, 0, 10)
-	Img_EnemyCrawlerEliteDie[1] =  LoadAnimImage("incbin::media/img/anim/crawlerEliteDie225.png", 200, 200, 0, 10)
-	Img_EnemyCrawlerEliteDie[2] =  LoadAnimImage("incbin::media/img/anim/crawlerEliteDie270.png", 200, 200, 0, 10)
-	Img_EnemyCrawlerEliteDie[3] =  LoadAnimImage("incbin::media/img/anim/crawlerEliteDie315.png", 200, 200, 0, 10)
-	Img_EnemyCrawlerEliteDie[4] =  LoadAnimImage("incbin::media/img/anim/crawlerEliteDie0.png", 200, 200, 0, 10)
-	
-	Img_EnemyCrawlerEliteCorpse =  LoadImage("incbin::media/img/anim/crawlerEliteCorpse.png")
+	Img_EnemyCrawlerCorpse =  LoadImage("incbin::assets/img/anim/crawlerCorpse.png")
 	
 	
-	Img_PlayerRun[1] = LoadAnimImage("incbin::media/img/anim/playerWalk45.png",128, 128, 0, 20)
-	Img_PlayerRun[2] = LoadAnimImage("incbin::media/img/anim/playerWalk90.png",128, 128, 0, 20)
-	Img_PlayerRun[3] = LoadAnimImage("incbin::media/img/anim/playerWalk135.png",128, 128, 0, 20)
-	Img_PlayerRun[4] = LoadAnimImage("incbin::media/img/anim/playerWalk180.png",128, 128, 0, 20)
-	Img_PlayerRun[5] = LoadAnimImage("incbin::media/img/anim/playerWalk225.png",128, 128, 0, 20)
-	Img_PlayerRun[6] = LoadAnimImage("incbin::media/img/anim/playerWalk270.png",128, 128, 0, 20)
-	Img_PlayerRun[7] = LoadAnimImage("incbin::media/img/anim/playerWalk315.png",128, 128, 0, 20)
-	Img_PlayerRun[0] = LoadAnimImage("incbin::media/img/anim/playerWalk0.png",128, 128, 0, 20)
+	Img_EnemyCrawlerEliteWalk[4] =  LoadAnimImage("incbin::assets/img/anim/crawlerEliteWalk45.png", 200, 200, 0, 20)
+	Img_EnemyCrawlerEliteWalk[5] =  LoadAnimImage("incbin::assets/img/anim/crawlerEliteWalk90.png", 200, 200, 0, 20)
+	Img_EnemyCrawlerEliteWalk[6] =  LoadAnimImage("incbin::assets/img/anim/crawlerEliteWalk135.png", 200, 200, 0, 20)
+	Img_EnemyCrawlerEliteWalk[7] =  LoadAnimImage("incbin::assets/img/anim/crawlerEliteWalk180.png", 200, 200, 0, 20)
+	Img_EnemyCrawlerEliteWalk[0] =  LoadAnimImage("incbin::assets/img/anim/crawlerEliteWalk225.png", 200, 200, 0, 20)
+	Img_EnemyCrawlerEliteWalk[1] =  LoadAnimImage("incbin::assets/img/anim/crawlerEliteWalk270.png", 200, 200, 0, 20)
+	Img_EnemyCrawlerEliteWalk[2] =  LoadAnimImage("incbin::assets/img/anim/crawlerEliteWalk315.png", 200, 200, 0, 20)
+	Img_EnemyCrawlerEliteWalk[3] =  LoadAnimImage("incbin::assets/img/anim/crawlerEliteWalk0.png", 200, 200, 0, 20)
 	
-	Img_PlayerStand[1] = LoadAnimImage("incbin::media/img/anim/playerStand45.png",128, 128, 0, 20)
-	Img_PlayerStand[2] = LoadAnimImage("incbin::media/img/anim/playerStand90.png",128, 128, 0, 20)
-	Img_PlayerStand[3]= LoadAnimImage("incbin::media/img/anim/playerStand135.png",128, 128, 0, 20)
-	Img_PlayerStand[4]= LoadAnimImage("incbin::media/img/anim/playerStand180.png",128, 128, 0, 20)
-	Img_PlayerStand[5]= LoadAnimImage("incbin::media/img/anim/playerStand225.png",128, 128, 0, 20)
-	Img_PlayerStand[6]= LoadAnimImage("incbin::media/img/anim/playerStand270.png",128, 128, 0, 20)
-	Img_PlayerStand[7]= LoadAnimImage("incbin::media/img/anim/playerStand315.png",128, 128, 0, 20)
-	Img_PlayerStand[0]= LoadAnimImage("incbin::media/img/anim/playerStand0.png",128, 128, 0, 20)
+	Img_EnemyCrawlerEliteAttack[4] =  LoadAnimImage("incbin::assets/img/anim/crawlerEliteAttack45.png", 200, 200, 0, 20)
+	Img_EnemyCrawlerEliteAttack[5] =  LoadAnimImage("incbin::assets/img/anim/crawlerEliteAttack90.png", 200, 200, 0, 20)
+	Img_EnemyCrawlerEliteAttack[6] =  LoadAnimImage("incbin::assets/img/anim/crawlerEliteAttack135.png", 200, 200, 0, 20)
+	Img_EnemyCrawlerEliteAttack[7] =  LoadAnimImage("incbin::assets/img/anim/crawlerEliteAttack180.png", 200, 200, 0, 20)
+	Img_EnemyCrawlerEliteAttack[0] =  LoadAnimImage("incbin::assets/img/anim/crawlerEliteAttack225.png", 200, 200, 0, 20)
+	Img_EnemyCrawlerEliteAttack[1] =  LoadAnimImage("incbin::assets/img/anim/crawlerEliteAttack270.png", 200, 200, 0, 20)
+	Img_EnemyCrawlerEliteAttack[2] =  LoadAnimImage("incbin::assets/img/anim/crawlerEliteAttack315.png", 200, 200, 0, 20)
+	Img_EnemyCrawlerEliteAttack[3] =  LoadAnimImage("incbin::assets/img/anim/crawlerEliteAttack0.png", 200, 200, 0, 20)
+	
+	Img_EnemyCrawlerEliteDie[5] =  LoadAnimImage("incbin::assets/img/anim/crawlerEliteDie45.png", 200, 200, 0, 10)
+	Img_EnemyCrawlerEliteDie[6] =  LoadAnimImage("incbin::assets/img/anim/crawlerEliteDie90.png", 200, 200, 0, 10)
+	Img_EnemyCrawlerEliteDie[7] =  LoadAnimImage("incbin::assets/img/anim/crawlerEliteDie135.png", 200, 200, 0, 10)
+	Img_EnemyCrawlerEliteDie[0] =  LoadAnimImage("incbin::assets/img/anim/crawlerEliteDie180.png", 200, 200, 0, 10)
+	Img_EnemyCrawlerEliteDie[1] =  LoadAnimImage("incbin::assets/img/anim/crawlerEliteDie225.png", 200, 200, 0, 10)
+	Img_EnemyCrawlerEliteDie[2] =  LoadAnimImage("incbin::assets/img/anim/crawlerEliteDie270.png", 200, 200, 0, 10)
+	Img_EnemyCrawlerEliteDie[3] =  LoadAnimImage("incbin::assets/img/anim/crawlerEliteDie315.png", 200, 200, 0, 10)
+	Img_EnemyCrawlerEliteDie[4] =  LoadAnimImage("incbin::assets/img/anim/crawlerEliteDie0.png", 200, 200, 0, 10)
+	
+	Img_EnemyCrawlerEliteCorpse =  LoadImage("incbin::assets/img/anim/crawlerEliteCorpse.png")
 	
 	
-	Img_DeathSpatterGreen = LoadAnimImage("incbin::media/img/anim/deathSpatterGreen.png",128, 128, 0, 10)
+	Img_PlayerRun[1] = LoadAnimImage("incbin::assets/img/anim/playerWalk45.png",128, 128, 0, 20)
+	Img_PlayerRun[2] = LoadAnimImage("incbin::assets/img/anim/playerWalk90.png",128, 128, 0, 20)
+	Img_PlayerRun[3] = LoadAnimImage("incbin::assets/img/anim/playerWalk135.png",128, 128, 0, 20)
+	Img_PlayerRun[4] = LoadAnimImage("incbin::assets/img/anim/playerWalk180.png",128, 128, 0, 20)
+	Img_PlayerRun[5] = LoadAnimImage("incbin::assets/img/anim/playerWalk225.png",128, 128, 0, 20)
+	Img_PlayerRun[6] = LoadAnimImage("incbin::assets/img/anim/playerWalk270.png",128, 128, 0, 20)
+	Img_PlayerRun[7] = LoadAnimImage("incbin::assets/img/anim/playerWalk315.png",128, 128, 0, 20)
+	Img_PlayerRun[0] = LoadAnimImage("incbin::assets/img/anim/playerWalk0.png",128, 128, 0, 20)
 	
-	Img_Ground1 = LoadImage("incbin::media/img/detail/ground1.png")
-	Img_Health = LoadImage("incbin::media/img/detail/health.png")
-	Img_WrongWayArrow = LoadImage("incbin::media/img/detail/wrongWayArrow.png")
+	Img_PlayerStand[1] = LoadAnimImage("incbin::assets/img/anim/playerStand45.png",128, 128, 0, 20)
+	Img_PlayerStand[2] = LoadAnimImage("incbin::assets/img/anim/playerStand90.png",128, 128, 0, 20)
+	Img_PlayerStand[3]= LoadAnimImage("incbin::assets/img/anim/playerStand135.png",128, 128, 0, 20)
+	Img_PlayerStand[4]= LoadAnimImage("incbin::assets/img/anim/playerStand180.png",128, 128, 0, 20)
+	Img_PlayerStand[5]= LoadAnimImage("incbin::assets/img/anim/playerStand225.png",128, 128, 0, 20)
+	Img_PlayerStand[6]= LoadAnimImage("incbin::assets/img/anim/playerStand270.png",128, 128, 0, 20)
+	Img_PlayerStand[7]= LoadAnimImage("incbin::assets/img/anim/playerStand315.png",128, 128, 0, 20)
+	Img_PlayerStand[0]= LoadAnimImage("incbin::assets/img/anim/playerStand0.png",128, 128, 0, 20)
 	
-	Img_Shot = LoadImage("incbin::media/img/detail/shot.png")
-	Img_LightRadius = LoadImage("incbin::media/img/detail/lightRadius.png")
+	
+	Img_DeathSpatterGreen = LoadAnimImage("incbin::assets/img/anim/deathSpatterGreen.png",128, 128, 0, 10)
+	
+	Img_Ground1 = LoadImage("incbin::assets/img/detail/ground1.png")
+	Img_Health = LoadImage("incbin::assets/img/detail/health.png")
+	Img_WrongWayArrow = LoadImage("incbin::assets/img/detail/wrongWayArrow.png")
+	
+	Img_Shot = LoadImage("incbin::assets/img/detail/shot.png")
+	Img_LightRadius = LoadImage("incbin::assets/img/detail/lightRadius.png")
 
-	Img_Scan = LoadImage("incbin::media/img/detail/scan.png")
-	Img_Scan1 = LoadImage("incbin::media/img/detail/scan1.png")
-	Img_BloodSpatterRed = LoadImage("incbin::media/img/detail/bloodSpatterRed.png")
-	Img_BloodSpatterGreen = LoadImage("incbin::media/img/detail/bloodSpatterGreen.png")
+	Img_Scan = LoadImage("incbin::assets/img/detail/scan.png")
+	Img_Scan1 = LoadImage("incbin::assets/img/detail/scan1.png")
+	Img_BloodSpatterRed = LoadImage("incbin::assets/img/detail/bloodSpatterRed.png")
+	Img_BloodSpatterGreen = LoadImage("incbin::assets/img/detail/bloodSpatterGreen.png")
 	
 	
 	'SFX
-	Sfx_PlayerDie 		= LoadSound("incbin::media/sfx/playerDie.wav")
-	Sfx_PlayerGetHitten1 	= LoadSound("incbin::media/sfx/playerGetHitten1.wav")
-	Sfx_PlayerGetHitten2 	= LoadSound("incbin::media/sfx/playerGetHitten2.wav")
-	Sfx_PlayerGetHitten3 	= LoadSound("incbin::media/sfx/playerGetHitten3.wav")
-	Sfx_PlayerShot1 		= LoadSound("incbin::media/sfx/playerShot1.wav")
+	Sfx_PlayerDie 		= LoadSound("incbin::assets/sfx/playerDie.wav")
+	Sfx_PlayerGetHitten1 	= LoadSound("incbin::assets/sfx/playerGetHitten1.wav")
+	Sfx_PlayerGetHitten2 	= LoadSound("incbin::assets/sfx/playerGetHitten2.wav")
+	Sfx_PlayerGetHitten3 	= LoadSound("incbin::assets/sfx/playerGetHitten3.wav")
+	Sfx_PlayerShot1 		= LoadSound("incbin::assets/sfx/playerShot1.wav")
 	SetChannelVolume Chn_PlayerShot, 0 
 	
-	Sfx_PlayerGasp1 		= LoadSound("Incbin::media/sfx/playerGasp1.wav")
-	Sfx_PlayerGasp2		= LoadSound("Incbin::media/sfx/playerGasp2.wav")
-	Sfx_PlayerBreath1		= LoadSound("Incbin::media/sfx/playerBreathe1.wav")
-	Sfx_PlayerBreath2		= LoadSound("Incbin::media/sfx/playerBreathe2.wav")
-	Sfx_PlayerStep1		= LoadSound("Incbin::media/sfx/playerStep1.wav")
-	Sfx_PlayerStep2		= LoadSound("Incbin::media/sfx/playerStep2.wav")
+	Sfx_PlayerGasp1 		= LoadSound("Incbin::assets/sfx/playerGasp1.wav")
+	Sfx_PlayerGasp2		= LoadSound("Incbin::assets/sfx/playerGasp2.wav")
+	Sfx_PlayerBreath1		= LoadSound("Incbin::assets/sfx/playerBreathe1.wav")
+	Sfx_PlayerBreath2		= LoadSound("Incbin::assets/sfx/playerBreathe2.wav")
+	Sfx_PlayerStep1		= LoadSound("Incbin::assets/sfx/playerStep1.wav")
+	Sfx_PlayerStep2		= LoadSound("Incbin::assets/sfx/playerStep2.wav")
 	SetChannelVolume Chn_PlayerSteps, 0.3 
 
-	Sfx_CrawlerDie = LoadSound("incbin::media/sfx/crawlerDie.wav")
+	Sfx_CrawlerDie = LoadSound("incbin::assets/sfx/crawlerDie.wav")
 	
 End Function
 
